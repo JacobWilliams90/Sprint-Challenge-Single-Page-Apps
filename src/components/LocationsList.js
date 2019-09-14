@@ -14,7 +14,7 @@ export default function LocationsList() {
   }, []);
 
   return (
-    <div>
+    <div className="grid-view">
       {location.map(location => (
         <LocationCard
           name={location.name}

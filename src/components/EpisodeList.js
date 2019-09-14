@@ -16,7 +16,7 @@ export default function EpisodeList(props) {
   }, []);
 
   return (
-    <div>
+    <div className="grid-view">
       {episode.map(episode => (
         <EpisodeCard
           name={episode.name}

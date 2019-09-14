@@ -16,7 +16,6 @@ export default function CharacterList(props) {
 
   return (
     <section className="character-list grid-view">
-      <h2>
         {char.map((char, index) => (
           <CharacterCard
             image={char.image}
@@ -26,7 +25,6 @@ export default function CharacterList(props) {
             status={char.status}
           />
         ))}
-      </h2>
     </section>
   );
 }
