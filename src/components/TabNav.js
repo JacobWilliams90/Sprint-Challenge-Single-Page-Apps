@@ -24,9 +24,8 @@ const locationLabel = lables("video", "Locations")
 const panes = [
     { menuItem: <Menu.Item key='home' as={Nav} to={`/`} content={welcomeLabel} /> },
     { menuItem: <Menu.Item key='characters' as={Nav} to={`/characters`} content={characterLabel} /> },
-    { menuItem: <Menu.Item key='episode' as={Nav} to={`/episode`} content={episodeLabel} /> },
-    { menuItem: <Menu.Item key='locations' as={Nav} to={`/locations`} content={locationLabel} /> }
-    
+    { menuItem: <Menu.Item key='locations' as={Nav} to={`/locations`} content={locationLabel} /> },
+    { menuItem: <Menu.Item key='episode' as={Nav} to={`/episode`} content={episodeLabel} /> }
   ]
 
 export default function TabNav() {
