@@ -1,35 +1,29 @@
-import React, { useState, useEffect } from 'react'
-import axios from 'axios'
-import EpisodeCard from './EpisodeCard'
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import EpisodeCard from "./EpisodeCard";
 
 export default function EpisodeList(props) {
-    const [episode, setEpisode] = useState([])
+  const [episode, setEpisode] = useState([]);
 
-    useEffect(() => {
-        axios.get('https://rickandmortyapi.com/api/episode/')
-        .then(res => {
-            setEpisode(res.data.results);
-        })
+  useEffect(() => {
+    axios
+      .get("https://rickandmortyapi.com/api/episode/")
+      .then(res => {
+        setEpisode(res.data.results);
+      })
 
-        .catch(err => console.log(err));
-    },[])
+      .catch(err => console.log(err));
+  }, []);
 
-    return (
-        <div>
-            {episode.map(episode =>
-            <EpisodeCard 
-                name={episode.name}
-                episode={episode.episode}
-                air_date={episode.air_date}
-            />)}
-        </div>
-    )
-
-
-
-
-
-
-
-
+  return (
+    <div>
+      {episode.map(episode => (
+        <EpisodeCard
+          name={episode.name}
+          episode={episode.episode}
+          air_date={episode.air_date}
+        />
+      ))}
+    </div>
+  );
 }
