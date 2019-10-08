@@ -10,13 +10,12 @@ const Div = styled.div`
   border-radius: 10px;
 `
 
-export default function LocationCard({ name, type, dimension, residents }) {
+export default function EpisodeCard(props) {
   return (
-    <Div className='loccard'>
-      <h2>{name}</h2>
-      <p>Type: {type}</p>
-      <p>Dimension: {dimension}</p>
-      <p>Residents: {residents}</p>
+    <Div className='epicard'>
+      <h2>{props.name}</h2>
+      <p>Air Date: {props.air_date}</p>
+      <p>Episode: {props.episode}</p>
     </Div>
   );
 }
